@@ -1,5 +1,5 @@
-faster-whisper==1.1.1
-ctranslate2==4.6.0
-numpy==2.3.2
-onnxruntime==1.22.1
-av==15.0.0
+pyserial==3.5
+SpeechRecognition==3.10.4
+pydub==0.25.1
+google-genai==0.1.1
+pydantic==2.10.6
