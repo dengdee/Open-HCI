@@ -13,6 +13,7 @@ BAUD_RATE = 460800
 WAVE_OUTPUT_FILENAME = "serial_audio.wav"
 STT_TEMP_FILENAME = "serial_audio_stt.wav"
 
+
 # 從環境變數讀取 API KEY
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 if not GEMINI_API_KEY:

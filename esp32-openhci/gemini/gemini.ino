@@ -10,7 +10,8 @@ const char* password = "MakeReality";
 const char* apiKey = "";
 
 // Gemini API URL
-const String url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + String(apiKey);
+const String url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" + String(apiKey);
+
 
 void setup() {
   Serial.begin(115200);
@@ -64,6 +65,7 @@ void printPrompt() {
 }
 
 // 發送請求給 Gemini API 的函式
+// 發送請求給 Gemini API 的函式（加強偵錯版）
 void sendToGemini(String prompt) {
   if (WiFi.status() == WL_CONNECTED) {
     HTTPClient http;
@@ -89,16 +91,29 @@ void sendToGemini(String prompt) {
     if (httpResponseCode > 0) {
       String response = http.getString();
       
+      // ===== 新增：印出 HTTP 狀態碼與完整的 JSON 回應 =====
+      Serial.print("[Debug] HTTP 狀態碼: ");
+      Serial.println(httpResponseCode);
+      Serial.println("[Debug] 原始回應內容如下：");
+      Serial.println(response); 
+      Serial.println("-------------------------------------");
+      // ==================================================
+      
       JsonDocument responseDoc;
       DeserializationError error = deserializeJson(responseDoc, response);
 
       if (!error) {
-        const char* reply = responseDoc["candidates"][0]["content"]["parts"][0]["text"];
-        if (reply) {
+        // 安全檢查：確保各層級節點都存在
+        if (responseDoc["candidates"] && 
+            responseDoc["candidates"][0]["content"] && 
+            responseDoc["candidates"][0]["content"]["parts"] && 
+            responseDoc["candidates"][0]["content"]["parts"][0]["text"]) {
+            
+          const char* reply = responseDoc["candidates"][0]["content"]["parts"][0]["text"];
           Serial.println("\nGemini 回應：");
           Serial.println(reply);
         } else {
-          Serial.println("【系統錯誤】無法解析 Gemini 的回應內容。");
+          Serial.println("【系統錯誤】無法解析 Gemini 的回應內容（結構不匹配）。");
         }
       } else {
         Serial.print("【系統錯誤】JSON 解析失敗: ");
