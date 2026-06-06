@@ -105,7 +105,7 @@ python server.py
 
 
 
-## 📌 備註
+# 📌 備註
 🔧 ESP32 驅動程式安裝
 如果電腦無法偵測到開發板的序列埠（COM Port），請依據您的作業系統安裝 CH340 晶片驅動：
 
@@ -113,6 +113,8 @@ Windows： [WCH 官方網站](https://www.wch.cn/downloads/CH341SER_EXE.html)。
 
 macOS： [.zip連結](https://drive.google.com/file/d/1dQEHnetZwXCdhG1hbLkvI_ds0QmPThNm/view?usp=drive_link)
 
-### [課程簡報](https://docs.google.com/presentation/d/15bBMoqgSZjmzkD2lpLJVOM9B6YgJIdC_/edit?usp=sharing&ouid=105567929126257770921&rtpof=true&sd=true)
+## [課程簡報](https://docs.google.com/presentation/d/15bBMoqgSZjmzkD2lpLJVOM9B6YgJIdC_/edit?usp=sharing&ouid=105567929126257770921&rtpof=true&sd=true)
+
+## [安裝簡報](https://docs.google.com/presentation/d/1p1LzEmN6jrPihaLydruXp7sNmlV-kqDq/edit?usp=sharing&ouid=105567929126257770921&rtpof=true&sd=true)
 
 
