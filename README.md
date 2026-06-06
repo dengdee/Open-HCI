@@ -90,7 +90,6 @@ python server.py
 ```
 
 ## 🔌 ESP32 腳位設定（預設）
-程式碼腳位宣告參考
 
 ```C++
 #define BUTTON_PIN   4
@@ -113,5 +112,7 @@ python server.py
 Windows： [WCH 官方網站](https://www.wch.cn/downloads/CH341SER_EXE.html)。
 
 macOS： [.zip連結](https://drive.google.com/file/d/1dQEHnetZwXCdhG1hbLkvI_ds0QmPThNm/view?usp=drive_link)
+
+### [課程簡報](https://docs.google.com/presentation/d/15bBMoqgSZjmzkD2lpLJVOM9B6YgJIdC_/edit?usp=sharing&ouid=105567929126257770921&rtpof=true&sd=true)
 
 
