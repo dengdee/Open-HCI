@@ -12,10 +12,9 @@
 - `gemini.ino`  
   👉 透過 Serial Monitor 與 Gemini 聊天
 
-- `STT_LLM/`  
+- `STT_LLM.ino`  
   👉 將音訊透過 Serial 傳到 server，用gemini的回覆控制led：
 
----
 
 ### 🖥️ Python Server
 
@@ -40,24 +39,27 @@ git clone https://github.com/<your_username>/<repo_name>.git
 cd <repo_name>
 ```
 ## 2️⃣ 建立虛擬環境
-Windows
+
+Windows：
 ```bash
 python -m venv venv
 venv\Scripts\activate
 ```
-Linux / macOS
+
+Linux / macOS：
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
+
 ## 3️⃣ 安裝套件
+
 ```bash
 pip install -r requirements.txt
-```bash
-
+```
 ⚠️ FFmpeg（必要）
 
-Windows（winget）：
+Windows：
 ```bash
 winget install Gyan.FFmpeg
 ```
