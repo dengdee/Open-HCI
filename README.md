@@ -38,7 +38,7 @@
 git clone https://github.com/<your_username>/<repo_name>.git
 cd <repo_name>
 ```
-## 2️⃣ 建立虛擬環境
+## 2️⃣ 建立虛擬環境 (Optional)
 
 Windows：
 ```bash
@@ -79,10 +79,33 @@ Windows (PowerShell)
 $env:GEMINI_API_KEY="你的_GEMINI_API_KEY_字串"
 ```
 
+Windows (CMD)
+```bash
+set GEMINI_API_KEY=你的_GEMINI_API_KEY
+```
+
 macOS / Linux
 ```bash
 export GEMINI_API_KEY="你的_GEMINI_API_KEY_字串"
 ```
+
+驗證是否設定成功
+
+Windows (PowerShell)
+```bash
+echo $env:GEMINI_API_KEY
+```
+
+Windows (CMD)
+```bash
+echo %GEMINI_API_KEY%
+```
+
+macOS / Linux
+```bash
+echo $GEMINI_API_KEY
+```
+⚠️ 此設定僅在目前終端機視窗有效，關閉後需重新設定。
 
 ## 5️⃣ 執行 Server
 ```bash
