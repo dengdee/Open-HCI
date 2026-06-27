@@ -55,9 +55,9 @@ source venv/bin/activate
 ## 3️⃣ 安裝套件
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
-⚠️ FFmpeg（必要）
+### FFmpeg（必要）
 
 Windows：
 ```bash
@@ -74,38 +74,47 @@ sudo apt install ffmpeg
 ```
 
 ## 4️⃣ 設定 API Key
-Windows (PowerShell)
-```bash
+
+請將 Gemini API Key 設定為環境變數。
+
+### Windows
+
+**Window PowerShell**
+```powershell
 $env:GEMINI_API_KEY="你的_GEMINI_API_KEY_字串"
 ```
 
-Windows (CMD)
-```bash
+**Window CMD**
+```cmd
 set GEMINI_API_KEY=你的_GEMINI_API_KEY
 ```
 
-macOS / Linux
+**macOS / Linux**
+
 ```bash
 export GEMINI_API_KEY="你的_GEMINI_API_KEY_字串"
 ```
 
-驗證是否設定成功
+---
 
-Windows (PowerShell)
-```bash
+### 驗證是否設定成功
+
+**Windows PowerShell**
+```powershell
 echo $env:GEMINI_API_KEY
 ```
 
-Windows (CMD)
-```bash
+**Windows CMD**
+```cmd
 echo %GEMINI_API_KEY%
 ```
 
-macOS / Linux
+**macOS / Linux**
 ```bash
 echo $GEMINI_API_KEY
 ```
-⚠️ 此設定僅在目前終端機視窗有效，關閉後需重新設定。
+
+> ⚠️ 此設定僅在目前終端機視窗有效，關閉後需重新設定。
 
 ## 5️⃣ 執行 Server
 ```bash
