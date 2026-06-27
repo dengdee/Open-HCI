@@ -75,10 +75,6 @@ sudo apt install ffmpeg
 
 ## 4️⃣ 設定 API Key
 
-請將 Gemini API Key 設定為環境變數。
-
-### Windows
-
 **Window PowerShell**
 ```powershell
 $env:GEMINI_API_KEY="你的_GEMINI_API_KEY_字串"
